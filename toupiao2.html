@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Hello MUI</title>
+		<title>进行投票</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,32 +19,17 @@
 			<h1 class="mui-title">进行投票</h1>
 		</header>
 		
-		<div id="maindiv">
-		
-		<script src="toupiao.js"></script>
-		<script>toupiao2Init();</script>
-		
-		<div class="mui-content">
-			<h5 class="mui-content-padded">GroupName</h5>
-			<div class="mui-card">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>A</label>
-						<input name="checkboxA" value="Item 1" type="checkbox">
-					</div>
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>B</label>
-						<input name="checkboxB" value="Item 2" type="checkbox">
-					</div>
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>C</label>
-						<input name="checkboxC" value="Item 2" type="checkbox">
-					</div>
-				</form>
+		<div id="maindiv"><Br><Br>
+
+			<script src="toupiao.js"></script>
+			<script>toupiao2Init();</script>
+			<div class="mui-button-row">
+				<button type="button" class="mui-btn mui-btn-primary" onclick=javascrtpt:nextone()>下一个</button>&nbsp;&nbsp;
+				<button type="button" class="mui-btn mui-btn-primary" onclick=javascrtpt:calu()>全部完成</button>
 			</div>
+			<div id="info"></div>
 		
 		</div>
-			
 		<script src="js/mui.min.js"></script>
 		<script>
 			mui.init({
