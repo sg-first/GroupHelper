@@ -34,6 +34,14 @@ function delLast()
 
 function finish()
 {
-	localStorage.setItem("par",allGroup.toString());
-	window.location.href="toupiao2.html";
+	if(allGroup.length==0)
+	{
+		mui.alert('请添加选项', '录入选项');
+		return;
+	}
+	else
+	{
+		localStorage.setItem("par",allGroup.toString());
+		window.location.href="toupiao2.html";
+	}
 }

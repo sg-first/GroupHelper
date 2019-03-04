@@ -16,8 +16,6 @@ function chouqian()
 	{
 		num = parseInt(num);
 		var result = rand(num);
-		mui.alert(result.toString(), '抽签结果' /*, function() {
-			info.innerText = '通知区可以显示内容';
-		}*/);
+		mui.alert(result.toString(), '抽签结果');
 	}
 }

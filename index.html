@@ -96,26 +96,6 @@
 					plus.navigator.setFullscreen(false);
 					//预加载
 					preload();
-				} else {
-					//显示启动导航
-					mui.openWindow({
-						id: 'guide',
-						url: 'examples/guide.html',
-						styles: {
-							popGesture: "none"
-						},
-						show: {
-							aniShow: 'none'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-					//延迟的原因：优先打开启动导航页面，避免资源争夺
-					setTimeout(function() {
-						//预加载
-						preload();
-					}, 200);
 				}
 
 				//绘制顶部图标
@@ -318,17 +298,12 @@
 				}
 			});
 			//返回键
-			mui.back = function() {
-				if(parseInt(_self.getStyle().left) > 0) {
-					closeMenu();
-					return;
-				}
+			mui.back = function() 
+			{
+				plus.runtime.quit(); //下面那个不太好使，先直接退出
 
 				if(!_toast || !_toast.isVisible()) {
-					_toast = mui.toast('再按一次返回键退出<br>点此可&nbsp;<span style="border-bottom:1px solid #fff" onclick="openFeedback();">反馈意见</span>', {
-						duration: 'long',
-						type: 'div'
-					});
+					_toast = mui.toast('再按一次返回键退出');
 				} else {
 					plus.runtime.quit();
 				}
