@@ -1,1 +1,18 @@
-null
+{
+  "index.html": {
+    "refer": [
+      "chouqian.html",
+      "toupiao.html"
+    ]
+  },
+  "toupiao.html": {
+    "refer": [
+      "toupiao2.html"
+    ]
+  },
+  "toupiao2.html": {
+    "refer": [
+      "toupiao.html"
+    ]
+  }
+}
