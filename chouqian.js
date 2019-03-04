@@ -8,7 +8,7 @@ function rand(num)
 function chouqian()
 {
 	var num = document.getElementById("number").value;
-	if(num=="")
+	if(num == "")
 	{
 		mui.alert('请输入学号末尾', '抽签结果');
 	}
